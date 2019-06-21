@@ -1,41 +1,34 @@
-# _{Application Name}_
+# _Pizza Order 2.0_
 
-#### _{Brief description of application}, 2019_
+#### _User can select toppings and order pizza, 2019_
 
 #### By _**Hannah Melendy**_
 
 ## Description
 
-_{This is a detailed description of your application. Its purpose and usage.  Give as much detail as needed to explain what the application does, and any other information you want users or other developers to have. }_
+_This app allows a user to select the size of pizza for an order, plus the user can select toppings from a list of what's available. After the user is done, the total price will be displayed._
 
 ## Setup/Installation Requirements
 
-* _This is a great place_
-* _to list setup instructions_
-* _in a simple_
-* _easy-to-understand_
-* _format_
+* _clone repo from GitHub_
+* _open app in browser_
+* _have fun!_
 
-_{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+_internet is required to access code for app_
 
 ## Link to GitHub Pages
 
 _link on GitHub page is:_
-[whatever you want to display](https://github.com/H-Len/study-guide.git)
+[order some pizza :)](https://github.com/H-Len/pizza-order-2.0.git)
 
 ## Specs
 
 | Behavior | Input | Output |
 | -------- | ----- | ------ |
-|          |       |        |
-
-## Known Bugs
-
-_{Are there issues that have not yet been resolved that you want to let users know you know?  Outline any issues that would impact use of your application.  Share any workarounds that are in place. }_
-
-## Support and contact details
-
-_{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
+| Open welcome | click order pizza | pizza choices display |
+| standard $10 starting pizza cost | click order pizza | cost = $10 |
+| pizza size radio dials. sm + $1, md + $2, lg + $3 | click sm | cost = $11.00 |
+| Toppings add $1.00 for each | click pineapple | cost for sm = $12 |
 
 ### License
 

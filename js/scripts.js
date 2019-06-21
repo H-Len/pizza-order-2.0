@@ -1,33 +1,34 @@
 //business logic
 
-function Pizza(dough, sizes, toppings, price, orderName) {
-  this.dough = 10.00;
+function Pizza(sizes, toppings, totalPrice, orderName) {
   this.sizes = ["sm", "md", "lg"];
   this.toppings = ["fig", "olive", "onion"];
-  this.price = 0;
+  this.totalPrice = parseInt(10);
   this.orderName = "";
 }
 
-Pizza.prototype.cost = function() {
-  var totalPrice = this.dough;
-  if(this.sizes === "sm"){
-    this.dough += 1;
-  } else if(this.size === "md"){
-    this.price = this.dough + 2;
-  } else if(this.size === "lg"){
-    this.price = this.dought + 3;
-  }
-  totalPrice = this.price;
-  console.log(totalPrice);
+//add price of size of pizza to total cost
+Pizza.prototype.sizeCost = function() {
+  var sizeTotal = this.totalPrice;
+  sizeTotal += parseInt(yourSize);
+  console.log(sizeTotal);
 }
 
 Pizza.prototype.onTop = function () {
-  this.fig = parseInt(1);
-  this.olive = parseInt(1);
-  this.onion = parseInt(1);
+  if (this.fig) {
+    totalPrice += parseInt(1);
+  }
+  if (this.olive) {
+    totalPrice += parseInt(1);
+  }
+  if (this.onion) {
+    totalPrice += parseInt(1);
+  }
 }
 
-orderName = "";
+var orderName = "";
+var yourPizza = new Pizza(yourSize);
+var yourSize = yourPizza.size;
 
 
 
@@ -41,13 +42,22 @@ $(function() {
       $(".jumbotron").show();
     });
 
-    $(".sizes").click(function() {
-    //   event.preventDefault();
-      yourSize = $(".sizes").val();
-      console.log($(".sizes").val());
-      var yourPizza = new Pizza(yourSize);
-      console.log(yourPizza.cost());
-      $(".grandOrder").show();
-    });
+    $("#yourOrder").submit(function(event) {
+      event.preventDefault();
+      console.log("on top");
 
+
+      // $(".sizes").click(function() {
+      //   console.log("the options");
+      //   //   event.preventDefault();
+        yourSize = $(".sizes").val();
+        console.log(yourSize);
+        yourPizza.sizeCost();
+        // var perSize = totalPrice.cost();
+      //   console.log(perSize);
+      //   var perTop = totalPrice.onTop();
+      //   console.log(perTop);
+      // })
+      $(".grandOrder").show();
+    })
 });

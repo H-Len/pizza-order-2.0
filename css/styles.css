@@ -1,3 +1,4 @@
-.za "{
+#za {
   background-image: image("img/cheesePizza1.jpeg");
-}"
+  float: right;
+}

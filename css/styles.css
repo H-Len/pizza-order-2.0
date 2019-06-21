@@ -1,5 +1,6 @@
 body {
   background-color: brown;
+  margin: 15px;
   }
 
 h1 {
@@ -27,6 +28,9 @@ h1 {
 .grandOrder {
   display: none;
   width: 30%;
+  background-color: salmon;
+  border-style: double;
+  float: right;
 }
 
 #totalCost {

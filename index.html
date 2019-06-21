@@ -17,48 +17,50 @@
       <form class="pizzaForm" action="index.html" method="post">
         <div class="form-group">
           <label for="userName">What is the name for this order?<br>
-          Click on the button to enter the name.</label>
-          <input id="userName" type="text">
-        </div>
-      </form>
-      <button id="nameBtn" type="submit" name="button">Enter name</button>
-    </div>
+            Click on the button to enter the name.</label>
+            <input id="userName" type="text">
+          </div>
+        </form>
+        <button id="nameBtn" type="submit" name="button">Enter name</button>
+      </div>
 
-    <div class="jumbotron">
-      <form id="yourOrder" action="index.html" method="post">
-        <div class="form-group">
-          <h4>Select the size</h4>
-          <p>There is a standard charge of $10 for the dough, and then the price varies depending on the size of the pizza.</p>
-          <select class="sizes" name="sizes">
-            <option class="sm" value="1">Small</option>
-            <option class="md" value="2">Medium</option>
-            <option class="lg" value="3">Hungry</option>
-          </select>
-          <hr>
-          <h4>Select your toppings</h4>
-          <p>$1 per topping selection.</p>
-          <div class="row">
-            <div class="col-3-sm">
-              <input id="fig" type="checkbox">
-              <label for="fig">Fig</label>
-            </div>
-            <div class="col-3-sm">
-              <input id="olive" type="checkbox">
-              <label for="olive">Olive</label>
-            </div>
-            <div class="col-3-sm">
-              <input id="onion" type="checkbox">
-              <label for="onion">Onion</label>
+      <div class="jumbotron">
+        <form id="yourOrder" action="index.html" method="post">
+          <div class="form-group">
+            <div class="greet"></div>
+            <h4>Select the size</h4>
+            <p>There is a standard charge of $10 for the dough, and then the price varies depending on the size of the pizza.</p>
+            <select class="sizes" name="sizes">
+              <option class="sm" value="1">Small</option>
+              <option class="md" value="2">Medium</option>
+              <option class="lg" value="3">Hungry</option>
+            </select>
+            <hr>
+            <h4>Select your toppings</h4>
+            <p>For our grand opening, complementary options for topping selection!</p>
+            <div class="row">
+              <div class="col-3-sm">
+                <input class="topper" id="fig" type="checkbox">
+                <label for="fig" value="1">Fig</label>
+              </div>
+              <div class="col-3-sm">
+                <input class="topper" id="olive" type="checkbox">
+                <label for="olive" value="1">Olive</label>
+              </div>
+              <div class="col-3-sm">
+                <input class="topper" id="onion" type="checkbox">
+                <label for="onion" value="1">Onion</label>
+              </div>
             </div>
           </div>
-        </div>
-        <button id="orderBtn" type="submit" name="button">Send your order to the oven</button>
-      </form>
-    </div>
-    <div class="grandOrder">
-      <p>Thank you for choosing the best pizza</p>
-      <p>Total for your priceless pizza: <span id="totalCost"></span></p>
-    </div>
+          <button id="orderBtn" type="submit" name="button">Send your order to the oven</button>
+        </form>
+      </div>
 
-  </body>
-</html>
+      <div class="grandOrder">
+        <p>Thank you for choosing the best pizza makers.</p>
+        <p>Total for your priceless pizza: <span id="totalCost"></span></p>
+      </div>
+      <button class="refresh" type="submit" name="button">Start again!</button>
+    </body>
+  </html>

@@ -12,52 +12,69 @@ Pizza.prototype.sizeCost = function() {
   var sizeTotal = this.totalPrice;
   sizeTotal += parseInt(yourSize);
   console.log(sizeTotal);
+  return sizeTotal;
 }
 
+//this currently adds all everytime since all are always options
 Pizza.prototype.onTop = function () {
-  if (this.fig) {
-    totalPrice += parseInt(1);
+  var toppingTotal = this.totalPrice;
+  if("#fig") {
+    toppingTotal ++;
   }
-  if (this.olive) {
-    totalPrice += parseInt(1);
+  if("#olive") {
+    toppingTotal++;
   }
-  if (this.onion) {
-    totalPrice += parseInt(1);
+  if("#onion") {
+    toppingTotal++;
   }
-}
+    console.log(toppingTotal);
+};
+
+
 
 var orderName = "";
 var yourPizza = new Pizza(yourSize);
 var yourSize = yourPizza.size;
-
-
+var sizeP = "";
+var sizeTotal = "";
+var totalDue;
+// var perTop = "";
+// var totalDue = yourSize + perTop;
+// console.log(totalDue);
 
 //UI logic
 $(function() {
 
   //get name for order
-    $("#nameBtn").click(function() {
+    $("#nameBtn").click(function(event) {
+      event.preventDefault();
       orderName = $("#userName").val();
-      console.log(orderName);
       $(".jumbotron").show();
+      $(".greet").html(orderName);
     });
 
     $("#yourOrder").submit(function(event) {
       event.preventDefault();
-      console.log("on top");
+      yourSize = $(".sizes").val();
+      totalDue = $(yourPizza.sizeCost());
+      console.log(sizeP);
+      // $(".topper").val();
+      perTop = $(yourPizza.onTop());
+      console.log(perTop);
+    // })
+      $(".grandOrder").show(function() {
+        setInterval(function() {
+          window.scrollTo(0,document.body.scrollHeight);
+        });
+        $("#totalCost").text(totalDue);    //it says "sizeTotal" is returned as [object Object], but it's returned from .sizeCost() and other steps are taken to set it
+        $(".refresh").show()
+        $(".refresh").click(function() {
+          window.location.reload();
+        });
+      });
 
 
-      // $(".sizes").click(function() {
-      //   console.log("the options");
-      //   //   event.preventDefault();
-        yourSize = $(".sizes").val();
-        console.log(yourSize);
-        yourPizza.sizeCost();
-        // var perSize = totalPrice.cost();
-      //   console.log(perSize);
-      //   var perTop = totalPrice.onTop();
-      //   console.log(perTop);
-      // })
-      $(".grandOrder").show();
-    })
+
+    });
+
 });

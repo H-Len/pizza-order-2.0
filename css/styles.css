@@ -19,6 +19,10 @@ h1 {
   background-color: inherit;
 }
 
+.greet {
+  font-size: 3rem;
+}
+
 .jumbotron {
   display: none;
   width: 80%;
@@ -33,6 +37,21 @@ h1 {
   float: right;
 }
 
+.col-3-sm {
+  border: solid 2px brown;
+  border-radius: 50%;
+  padding: 3px;
+  margin: 2px;
+  background-color: teal;
+  text-transform: uppercase;
+  font-weight: 900;
+}
+
 #totalCost {
   background-color: lightgrey;
+}
+
+.refresh {
+  display: none;
+  float: right;
 }

@@ -9,6 +9,7 @@
     <title>Pizza Order 2.0</title>
   </head>
   <body>
+    <img src="img/cheesePizza1.jpeg" alt="basic cheese pizza">
     <div class="container">
 
       <h1>Welcome to the finest pizza, anywhere!</h1>
@@ -26,7 +27,7 @@
       <form id="yourOrder" action="index.html" method="post">
         <div class="form-group">
           <h4>Select the size</h4>
-          <select class="toppings" name="toppings">
+          <select class="sizes" name="sizes">
             <option value="1">Small</option>
             <option value="2">Medium</option>
             <option value="3">Hungry</option>
@@ -41,6 +42,10 @@
         </div>
       </form>
 
+    </div>
+    <div class="grandOrder">
+      <p>Thank you for choosing the best pizza</p>
+      <p>Total for your priceless pizza: <span id="totalCost"></span></p>
     </div>
 
   </body>

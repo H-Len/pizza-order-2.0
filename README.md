@@ -26,9 +26,9 @@ _link on GitHub page is:_
 | Behavior | Input | Output |
 | -------- | ----- | ------ |
 | Open welcome | click order pizza | pizza choices display |
-| standard $10 starting pizza cost | click order pizza | cost = $10 |
-| pizza size radio dials. sm + $1, md + $2, lg + $3 | click sm | cost = $11.00 |
-| Toppings add $1.00 for each | click pineapple | cost for sm = $12 |
+| standard $10 starting pizza cost | select large | cost = 13 |
+| pizza size dropdown selector. sm + $1, md + $2, lg + $3 | select sm | cost = 11 |
+<!-- | Toppings {will} add $1.00 for each | click pineapple | cost for sm = $12 | -->
 
 ### License
 

@@ -1,35 +1,31 @@
 //business logic
 
-function Pizza(dough, size) {
+function Pizza(dough, sizes, toppings, price, orderName) {
   this.dough = 10.00;
-  this.size = [sm, md, lg];
+  this.sizes = ["sm", "md", "lg"];
+  this.toppings = ["fig", "olive", "onion"];
   this.price = 0;
   this.orderName = "";
 }
 
 Pizza.prototype.cost = function() {
-  if(this.size === sm){
-    this.price = this.dough + 1;
-  } else if(this.size === md){
+  var totalPrice = this.dough;
+  if(this.sizes === "sm"){
+    this.dough += 1;
+  } else if(this.size === "md"){
     this.price = this.dough + 2;
-  } else if(this.size === lg){
+  } else if(this.size === "lg"){
     this.price = this.dought + 3;
   }
+  totalPrice = this.price;
+  console.log(totalPrice);
 }
 
-function Topping(fig, olive, onion) {
-  this.fig = fig;
-  this.olive = olive;
-  this.onion = onion;
-}
-
-Topping.prototype.cost = function() {
+Pizza.prototype.onTop = function () {
   this.fig = parseInt(1);
   this.olive = parseInt(1);
   this.onion = parseInt(1);
 }
-
-
 
 orderName = "";
 
@@ -42,5 +38,16 @@ $(function() {
     $("#nameBtn").click(function() {
       orderName = $("#userName").val();
       console.log(orderName);
+      $(".jumbotron").show();
     });
+
+    $(".sizes").click(function() {
+    //   event.preventDefault();
+      yourSize = $(".sizes").val();
+      console.log($(".sizes").val());
+      var yourPizza = new Pizza(yourSize);
+      console.log(yourPizza.cost());
+      $(".grandOrder").show();
+    });
+
 });

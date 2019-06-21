@@ -2,3 +2,13 @@
   background-image: image("img/cheesePizza1.jpeg");
   float: right;
 }
+
+.jumbotron {
+  display: none;
+  width: 80%;
+}
+
+.grandOrder {
+  display: none;
+  width: 30%;
+}

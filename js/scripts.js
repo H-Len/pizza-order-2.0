@@ -72,9 +72,9 @@ $(function() {
       //display total at bottom of page
       $("#totalCost").text(yourBill.tabCost());
     })
+    $(".refresh").show()
   })
 
-  $(".refresh").show()
   $(".refresh").click(function() {
     window.location.reload();
   });

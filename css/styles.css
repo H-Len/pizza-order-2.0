@@ -35,6 +35,7 @@ h1 {
   background-color: salmon;
   border-style: double;
   float: right;
+  margin: 5px;
 }
 
 .col-3-sm {

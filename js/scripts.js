@@ -12,7 +12,6 @@ Bill.prototype.tabCost = function() {
   var totalDue = "";
   var orderName = "";
   //add price depending on size
-  var sizeTotal = "";
   var sizeTotal = this.totalPrice;
   yourSize = $(".sizes").val();
   sizeTotal += parseInt(yourSize);
@@ -41,7 +40,6 @@ Bill.prototype.tabCost = function() {
 //UI logic
 $(function() {
   var yourSize = $(".sizes").val();
-
   var yourBill = new Bill(yourSize);
 
 //get name for order
@@ -53,8 +51,7 @@ $(function() {
   });
   $("#yourOrder").submit(function(event) {
     event.preventDefault();
-    var yourSize = yourBill.size;
-    $(".sizeVal").text(yourSize);
+    $(".sizeVal").text($(".sizes").val());
 
     totalDue = $(yourBill.tabCost());
     $(".grandOrder").show(function(totalDue) {

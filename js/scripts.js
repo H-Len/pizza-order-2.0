@@ -12,6 +12,8 @@ function Bill(sizes, totalPrice, orderName, toppingCost, tab){
 }
 
 Bill.prototype.tabCost = function() {
+  var totalDue = "";
+  var orderName = "";
   //add price depending on size
   var sizeTotal = this.totalPrice;
   sizeTotal += parseInt(yourSize);
@@ -36,11 +38,9 @@ Bill.prototype.tabCost = function() {
 
 
 
-var orderName = "";
 var yourBill = new Bill(yourSize);
 var yourSize = yourBill.size;
 var sizeTotal = "";
-var totalDue = "";
 var tabCost;
 
 
